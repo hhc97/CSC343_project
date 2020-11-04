@@ -65,9 +65,8 @@ create table Economy
 
 create table Age
 (
-    ageID      genericPositiveInt primary key,
-    ageGroup   varchar(20) not null,
-    population genericPositiveInt
+    ageID    genericPositiveInt primary key,
+    ageGroup varchar(20) not null
 );
 
 create table SuicideRates
