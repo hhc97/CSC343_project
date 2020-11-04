@@ -51,14 +51,12 @@ create table Country
 
 create table Economy
 (
-    cID        genericPositiveInt,
-    year       genericPositiveInt,
-    GDP        genericPositiveInt,
-    population genericPositiveInt,
-    GDPcapita  genericPositiveReal,
-    gini       ind100,
-    lifespan   genericPositiveReal,
-    demoIndex  ind100,
+    cID       genericPositiveInt,
+    year      genericPositiveInt,
+    GDPcapita genericPositiveReal,
+    gini      ind100,
+    lifespan  genericPositiveReal,
+    demoIndex ind100,
     primary key (cID, year),
     foreign key (cID) references Country
 );
