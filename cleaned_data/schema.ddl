@@ -40,11 +40,10 @@ create table Government
 
 create table Country
 (
-    cID      genericPositiveInt primary key,
-    cName    varchar(50) not null,
-    conID    genericPositiveInt,
-    govID    genericPositiveInt,
-    landArea genericPositiveReal,
+    cID   genericPositiveInt primary key,
+    cName varchar(50) not null,
+    conID genericPositiveInt,
+    govID genericPositiveInt,
     foreign key (conID) references Continent,
     foreign key (govID) references Government
 );
