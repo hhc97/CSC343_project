@@ -1,0 +1,2 @@
+\i schema.ddl
+\i import_343project.txt
