@@ -150,6 +150,21 @@ def clean_economy_statistics() -> None:
                 writer.writerow([countries[country], year, gdp_capita, gini, lifespan, demo_index])
 
 
+def clean_country_statistics() -> None:
+    """
+    Cleans the aggregated statistics for each country.
+    """
+    countries = get_country_mapping()
+    continents = get_continent_mapping()
+    with open('data/country_continent_government.csv', 'r', newline='') as data_in:
+        reader = csv.reader(data_in)
+        with open('cleaned_data/countries_cleaned.csv', 'w', newline='') as data_out:
+            writer = csv.writer(data_out)
+            for cont, country, govid in reader:
+                writer.writerow([countries[country], country, continents[cont], govid])
+
+
 if __name__ == '__main__':
     clean_suicide_statistics()
     clean_economy_statistics()
+    clean_country_statistics()
