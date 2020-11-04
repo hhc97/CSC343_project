@@ -76,6 +76,46 @@ def clean_suicide_statistics() -> None:
                 writer.writerow([countries[country], year, ageid, suicides, population, s_rate, sex])
 
 
+def get_life_expectancy():
+    """
+    Returns a mapping of country and year to life expectancy.
+    """
+    countries = get_country_mapping()
+    alternatives = {'Bolivia (Plurinational State of)': 'Bolivia',
+                    'Brunei Darussalam': 'Brunei',
+                    "CÃ´te d'Ivoire": "Cote d'Ivoire",
+                    'Congo': 'Congo (Congo-Brazzaville)',
+                    'Czechia': 'Czech Republic',
+                    "Democratic People's Republic of Korea": 'South Korea',
+                    'Iran (Islamic Republic of)': 'Iran',
+                    "Lao People's Democratic Republic": 'Laos',
+                    'Micronesia (Federated States of)': 'Micronesia',
+                    'Myanmar': 'Myanmar (formerly Burma)',
+                    'Republic of Korea': 'North Korea',
+                    'Republic of Moldova': 'Moldova',
+                    'Russian Federation': 'Russia',
+                    'Swaziland': 'Eswatini (fmr. "Swaziland")',
+                    'Syrian Arab Republic': 'Syria',
+                    'The former Yugoslav republic of Macedonia': 'North Macedonia',
+                    'United Kingdom of Great Britain and Northern Ireland': 'Ireland',
+                    'United Republic of Tanzania': 'Tanzania',
+                    'Venezuela (Bolivarian Republic of)': 'Venezuela',
+                    'Viet Nam': 'Vietnam'}
+    life_expectancies = {}
+    with open('data/life_expectancy_data.csv', 'r', newline='') as data_in:
+        reader = csv.reader(data_in)
+        next(reader)
+        for row in reader:
+            country = row[0]
+            country = alternatives.get(country, country)
+            year = row[1]
+            life_expectancy = row[3]
+            if country not in countries:
+                continue
+            life_expectancies[(countries[country], year)] = life_expectancy
+    return life_expectancies
+
+
 def clean_economy_statistics() -> None:
     """
     Cleans the income inequality data.
