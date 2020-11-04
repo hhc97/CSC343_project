@@ -17,6 +17,18 @@ def get_country_mapping():
     return countries_dict
 
 
+def get_continent_mapping():
+    """
+    Returns a dictionary mapping countries to their ID.
+    """
+    continents_dict = {}
+    with open('data/continent_mapping.csv', 'r', newline='') as f:
+        reader = csv.reader(f)
+        for cid, continent in reader:
+            continents_dict[cid] = continent
+    return continents_dict
+
+
 def clean_suicide_statistics() -> None:
     """
     Cleans the WHO suicide statistics.
