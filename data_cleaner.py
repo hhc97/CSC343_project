@@ -5,6 +5,18 @@ A script used to clean data for the CSC343 Databases project.
 import csv
 
 
+def get_country_mapping():
+    """
+    Returns a dictionary mapping countries to their ID.
+    """
+    countries_dict = {}
+    with open('data/country_mapping.csv', 'r', newline='') as f:
+        reader = csv.reader(f)
+        for cid, country in reader:
+            countries_dict[cid] = country
+    return countries_dict
+
+
 def clean_suicide_statistics() -> None:
     """
     Cleans the WHO suicide statistics.
