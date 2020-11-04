@@ -13,7 +13,7 @@ def get_country_mapping():
     with open('data/country_mapping.csv', 'r', newline='') as f:
         reader = csv.reader(f)
         for cid, country in reader:
-            countries_dict[cid] = country
+            countries_dict[country] = cid
     return countries_dict
 
 
@@ -25,7 +25,7 @@ def get_continent_mapping():
     with open('data/continent_mapping.csv', 'r', newline='') as f:
         reader = csv.reader(f)
         for cid, continent in reader:
-            continents_dict[cid] = continent
+            continents_dict[continent] = cid
     return continents_dict
 
 
@@ -36,8 +36,8 @@ def get_age_mapping():
     ages_dict = {}
     with open('data/age_mapping.csv', 'r', newline='') as f:
         reader = csv.reader(f)
-        for cid, age in reader:
-            ages_dict[cid] = age
+        for aid, age in reader:
+            ages_dict[age] = aid
     return ages_dict
 
 
