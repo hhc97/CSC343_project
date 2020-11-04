@@ -45,12 +45,35 @@ def clean_suicide_statistics() -> None:
     """
     Cleans the WHO suicide statistics.
     """
+    ages = get_age_mapping()
+    countries = get_country_mapping()
+    alternatives = {'Iran (Islamic Rep of)': 'Iran',
+                    'Brunei Darussalam': 'Brunei',
+                    'Netherlands Antilles': 'Netherlands',
+                    'Republic of Korea': 'South Korea',
+                    'Republic of Moldova': 'Moldova',
+                    'Russian Federation': 'Russia',
+                    'Saint Vincent and Grenadines': 'Saint Vincent and the Grenadines',
+                    'Syrian Arab Republic': 'Syria',
+                    'TFYR Macedonia': 'North Macedonia',
+                    'Venezuela (Bolivarian Republic of)': 'Venezuela'}
     with open('data/who_suicide_statistics.csv', 'r', newline='') as data_in:
         reader = csv.reader(data_in)
-        header = next(reader)
+        next(reader)
         with open('cleaned_data/who_suicide_statistics_cleaned.csv', 'w', newline='') as data_out:
             writer = csv.writer(data_out)
-            writer.writerow(header)
+            for row in reader:
+                country = row[0]
+                country = alternatives.get(country, country)
+                year = row[1]
+                sex = 'm' if row[2] == 'male' else 'f'
+                ageid = ages[row[3]]
+                suicides = row[4]
+                population = row[5]
+                if not suicides or not population or country not in countries:
+                    continue
+                s_rate = f'{100_000 * (int(suicides) / int(population)):.2f}'
+                writer.writerow([countries[country], year, ageid, suicides, population, s_rate, sex])
 
 
 if __name__ == '__main__':
