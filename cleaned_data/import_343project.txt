@@ -1,2 +1,3 @@
 \copy government from government_mapping.csv with csv
 \copy continent from continent_mapping.csv with csv
+\copy agegrp from age_mapping.csv with csv

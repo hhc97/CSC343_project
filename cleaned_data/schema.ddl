@@ -63,7 +63,7 @@ create table Economy
     foreign key (cID) references Country
 );
 
-create table Age
+create table AgeGrp
 (
     ageID    genericPositiveInt primary key,
     ageGroup varchar(20) not null
@@ -80,5 +80,5 @@ create table SuicideRates
     sex        char(1) not null,
     primary key (cID, year, ageID, sex),
     foreign key (cID) references Country,
-    foreign key (ageID) references Age
+    foreign key (ageID) references AgeGrp
 );
