@@ -2,3 +2,4 @@
 \copy continent from continent_mapping.csv with csv
 \copy agegrp from age_mapping.csv with csv
 \copy country from countries_cleaned.csv with csv
+\copy economy from income_inequality_cleaned.csv with csv
