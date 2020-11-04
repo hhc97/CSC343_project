@@ -3,3 +3,4 @@
 \copy agegrp from age_mapping.csv with csv
 \copy country from countries_cleaned.csv with csv
 \copy economy from income_inequality_cleaned.csv with csv
+\copy suiciderates from who_suicide_statistics_cleaned.csv with csv
