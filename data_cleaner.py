@@ -76,5 +76,35 @@ def clean_suicide_statistics() -> None:
                 writer.writerow([countries[country], year, ageid, suicides, population, s_rate, sex])
 
 
+def clean_economy_statistics() -> None:
+    """
+    Cleans the income inequality data.
+    """
+    countries = get_country_mapping()
+    alternatives = {'Cape Verde': 'Cabo Verde',
+                    'Congo, Dem. Rep.': 'Democratic Republic of the Congo',
+                    'Congo, Rep.': 'Congo (Congo-Brazzaville)',
+                    'Swaziland': 'Eswatini (fmr. "Swaziland")',
+                    'United States': 'United States of America',
+                    'Kyrgyz Republic': 'Kyrgyzstan',
+                    'Lao': 'Laos',
+                    'Myanmar': 'Myanmar (formerly Burma)',
+                    'Palestine': 'Palestine State',
+                    'Slovak Republic': 'Slovakia'}
+    with open('data/income_inequality.csv', 'r', newline='') as data_in:
+        reader = csv.reader(data_in)
+        next(reader)
+        with open('cleaned_data/income_inequality_cleaned.csv', 'w', newline='') as data_out:
+            writer = csv.writer(data_out)
+            for row in reader:
+                # print(row)
+                country = row[1]
+                country = alternatives.get(country, country)
+                year = row[2]
+                gdp_cap = row[4]
+                print(row)
+
+
 if __name__ == '__main__':
     clean_suicide_statistics()
+    clean_economy_statistics()
