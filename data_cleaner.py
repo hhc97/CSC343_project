@@ -121,6 +121,7 @@ def clean_economy_statistics() -> None:
     Cleans the income inequality data.
     """
     countries = get_country_mapping()
+    life_expectancies = get_life_expectancy()
     alternatives = {'Cape Verde': 'Cabo Verde',
                     'Congo, Dem. Rep.': 'Democratic Republic of the Congo',
                     'Congo, Rep.': 'Congo (Congo-Brazzaville)',
@@ -137,12 +138,16 @@ def clean_economy_statistics() -> None:
         with open('cleaned_data/income_inequality_cleaned.csv', 'w', newline='') as data_out:
             writer = csv.writer(data_out)
             for row in reader:
-                # print(row)
                 country = row[1]
                 country = alternatives.get(country, country)
                 year = row[2]
-                gdp_cap = row[4]
-                print(row)
+                gdp_capita = row[4]
+                gini = row[7]
+                if (countries[country], year) not in life_expectancies:
+                    continue
+                lifespan = life_expectancies[(countries[country], year)]
+                demo_index = row[3]
+                writer.writerow([countries[country], year, gdp_capita, gini, lifespan, demo_index])
 
 
 if __name__ == '__main__':
