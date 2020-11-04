@@ -1,0 +1,195 @@
+3,Algeria,1,5
+5,Angola,1,5
+19,Benin,1,5
+23,Botswana,1,5
+27,Burkina Faso,1,5
+28,Burundi,1,5
+31,Cameroon,1,5
+29,Cabo Verde,1,5
+33,Central African Republic,1,5
+34,Chad,1,5
+38,Comoros,1,5
+39,Congo (Congo-Brazzaville),1,5
+46,Democratic Republic of the Congo,1,5
+48,Djibouti,1,5
+52,Egypt,1,5
+54,Equatorial Guinea,1,5
+55,Eritrea,1,5
+58,Ethiopia,1,2
+62,Gabon,1,5
+63,Gambia,1,5
+66,Ghana,1,5
+70,Guinea,1,5
+71,Guinea-Bissau,1,5
+45,Cote d'Ivoire,1,5
+89,Kenya,1,5
+96,Lesotho,1,1
+97,Liberia,1,5
+98,Libya,1,1
+102,Madagascar,1,5
+103,Malawi,1,5
+106,Mali,1,1
+109,Mauritania,1,5
+110,Mauritius,1,2
+117,Morocco,1,4
+118,Mozambique,1,5
+120,Namibia,1,5
+126,Niger,1,5
+127,Nigeria,1,5
+145,Rwanda,1,5
+151,Sao Tome and Principe,1,5
+153,Senegal,1,5
+155,Seychelles,1,5
+156,Sierra Leone,1,5
+161,Somalia,1,2
+162,South Africa,1,5
+164,South Sudan,1,5
+167,Sudan,1,1
+57,"Eswatini (fmr. ""Swaziland"")",1,3
+173,Tanzania,1,5
+176,Togo,1,5
+179,Tunisia,1,5
+183,Uganda,1,5
+194,Zambia,1,5
+195,Zimbabwe,1,5
+1,Afghanistan,3,5
+13,Bahrain,3,4
+14,Bangladesh,3,2
+20,Bhutan,3,4
+25,Brunei,3,3
+119,Myanmar (formerly Burma),3,5
+30,Cambodia,3,1
+36,China,3,5
+175,Timor-Leste,3,5
+78,India,3,2
+79,Indonesia,3,5
+80,Iran,3,5
+81,Iraq,3,2
+83,Israel,3,2
+86,Japan,3,1
+87,Jordan,3,4
+88,Kazakhstan,3,5
+128,North Korea,3,5
+163,South Korea,3,5
+91,Kuwait,3,4
+92,Kyrgyzstan,3,2
+93,Laos,3,5
+95,Lebanon,3,2
+104,Malaysia,3,1
+105,Maldives,3,5
+115,Mongolia,3,5
+122,Nepal,3,2
+131,Oman,3,3
+132,Pakistan,3,2
+134,Palestine State,3,5
+139,Philippines,3,5
+142,Qatar,3,3
+144,Russia,3,5
+152,Saudi Arabia,3,3
+157,Singapore,3,2
+166,Sri Lanka,3,5
+171,Syria,3,5
+172,Tajikistan,3,5
+174,Thailand,3,1
+180,Turkey,3,5
+181,Turkmenistan,3,5
+185,United Arab Emirates,3,4
+189,Uzbekistan,3,5
+192,Vietnam,3,5
+193,Yemen,3,1
+2,Albania,4,2
+4,Andorra,4,1
+8,Armenia,4,2
+10,Austria,4,2
+11,Azerbaijan,4,5
+16,Belarus,4,5
+17,Belgium,4,1
+22,Bosnia and Herzegovina,4,2
+26,Bulgaria,4,2
+41,Croatia,4,2
+43,Cyprus,4,5
+44,Czech Republic,4,2
+47,Denmark,4,1
+56,Estonia,4,2
+60,Finland,4,2
+61,France,4,5
+64,Georgia,4,2
+65,Germany,4,2
+67,Greece,4,2
+76,Hungary,4,2
+77,Iceland,4,2
+82,Ireland,4,2
+84,Italy,4,2
+94,Latvia,4,2
+99,Liechtenstein,4,4
+100,Lithuania,4,5
+101,Luxembourg,4,1
+129,North Macedonia,4,2
+107,Malta,4,2
+113,Moldova,4,2
+114,Monaco,4,4
+116,Montenegro,4,2
+123,Netherlands,4,1
+130,Norway,4,1
+140,Poland,4,5
+141,Portugal,4,5
+143,Romania,4,5
+150,San Marino,4,5
+154,Serbia,4,2
+158,Slovakia,4,2
+159,Slovenia,4,2
+165,Spain,4,1
+169,Sweden,4,1
+170,Switzerland,4,5
+184,Ukraine,4,5
+186,United Kingdom,4,1
+74,Holy See,4,3
+6,Antigua and Barbuda,5,1
+12,Bahamas,5,1
+15,Barbados,5,1
+18,Belize,5,1
+32,Canada,5,1
+40,Costa Rica,5,5
+42,Cuba,5,5
+49,Dominica,5,2
+50,Dominican Republic,5,5
+53,El Salvador,5,5
+68,Grenada,5,1
+69,Guatemala,5,5
+73,Haiti,5,5
+75,Honduras,5,5
+85,Jamaica,5,1
+111,Mexico,5,5
+125,Nicaragua,5,5
+135,Panama,5,5
+146,Saint Kitts and Nevis,5,1
+147,Saint Lucia,5,1
+148,Saint Vincent and the Grenadines,5,1
+178,Trinidad and Tobago,5,2
+187,United States of America,5,5
+9,Australia,6,1
+59,Fiji,6,2
+90,Kiribati,6,5
+108,Marshall Islands,6,5
+112,Micronesia,6,5
+121,Nauru,6,5
+124,New Zealand,6,1
+133,Palau,6,5
+136,Papua New Guinea,6,1
+149,Samoa,6,2
+160,Solomon Islands,6,1
+177,Tonga,6,4
+182,Tuvalu,6,1
+190,Vanuatu,6,2
+7,Argentina,7,5
+21,Bolivia,7,5
+24,Brazil,7,5
+35,Chile,7,5
+37,Colombia,7,5
+51,Ecuador,7,5
+72,Guyana,7,5
+137,Paraguay,7,5
+138,Peru,7,5
+168,Suriname,7,5
+188,Uruguay,7,5
+191,Venezuela,7,5
