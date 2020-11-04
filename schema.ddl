@@ -77,7 +77,8 @@ create table SuicideRates
     suicides   genericPositiveInt,
     population genericPositiveInt,
     sRate      genericPositiveReal,
-    primary key (cID, year, ageID),
+    sex        char(1) not null,
+    primary key (cID, year, ageID, sex),
     foreign key (cID) references Country,
     foreign key (ageID) references Age
 );
