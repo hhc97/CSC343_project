@@ -3,6 +3,6 @@
 set search_path to project343;
 
 select sex,
-       avg(sRate)
+       avg(sRate) avgrate
 from SuicideRates
 group by sex;
