@@ -3,7 +3,7 @@ create schema project343;
 set search_path to project343;
 
 
-create domain contName as varchar(20)
+create domain contName as varchar(15)
     not null
     check (value in ('Africa', 'South America',
                      'Europe', 'North America',
