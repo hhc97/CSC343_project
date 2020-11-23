@@ -10,7 +10,6 @@ select e.year,
            when e.gini >= 50 then 'high'
            else 'unknown' end as gini_rating,
        avg(sRate)             as avgrates
-
 from SuicideRates rates,
      Economy e
 where rates.cID = e.cID

@@ -10,7 +10,6 @@ select e.year,
            when e.GDPcapita > 30000 then 'high'
            else 'unknown' end as income,
        avg(sRate)             as avgrates
-
 from SuicideRates rates,
      Economy e
 where rates.cID = e.cID
