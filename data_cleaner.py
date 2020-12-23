@@ -19,7 +19,7 @@ def get_country_mapping():
 
 def get_continent_mapping():
     """
-    Returns a dictionary mapping countries to their ID.
+    Returns a dictionary mapping continents to their ID.
     """
     continents_dict = {}
     with open('data/continent_mapping.csv', 'r', newline='') as f:
@@ -31,7 +31,7 @@ def get_continent_mapping():
 
 def get_age_mapping():
     """
-    Returns a dictionary mapping countries to their ID.
+    Returns a dictionary mapping age groups to their ID.
     """
     ages_dict = {}
     with open('data/age_mapping.csv', 'r', newline='') as f:
